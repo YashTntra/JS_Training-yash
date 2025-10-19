@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+
+  <section id="product-section"></section>
+
+  <section class="cart-section">
+    <h2>Cart</h2>
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Qty</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="cart-list"></tbody>
+      <tfoot>
+        <tr id="subtotal-row">
+          <td colspan="3">Subtotal</td>
+          <td id="subtotal-cell">0</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div>
+      <p>Qty Discount (10%): <span id="discount-field">0</span></p>
+      <p>Price Discount (5%): <span id="pricediscount-field">0</span></p>
+      <p><b>Final Total:</b> <span id="finaltotal-field">0</span></p>
+    </div>
+  </section>
+
+  <script src="script2.js"></script>
+</body>
+</html>
