@@ -38,7 +38,6 @@ function displayProducts(data) {
   });
 }
 
-// ✅ Add to cart
 function addToCart(product) {
   if (cart[product.id]) {
     cart[product.id].quantity += 1;
@@ -54,7 +53,6 @@ function addToCart(product) {
   calculateCart();
 }
 
-// ✅ Remove from cart (new simple function)
 function removeFromCart(id) {
   if (cart[id]) {
     cart[id].quantity -= 1;
@@ -69,7 +67,6 @@ function removeFromCart(id) {
   }
 }
 
-// ✅ Show all cart items
 function showCart() {
   // remove old rows (except subtotal)
   const oldRows = document.querySelectorAll(".cart-item");
@@ -110,7 +107,6 @@ function showCart() {
   });
 }
 
-// ✅ Calculate total and discounts
 function calculateCart() {
   let subtotal = 0;
   let totalQty = 0;
@@ -133,3 +129,4 @@ function calculateCart() {
   priceDiscount.textContent = priceDiscountVal.toFixed(2);
   finalTotal.textContent = final.toFixed(2);
 }
+
