@@ -1,0 +1,130 @@
+/* === Minimal Dark Shopping Cart UI === */
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #121212;
+  color: #f1f1f1;
+  margin: 0;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
+}
+
+#product-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  margin-bottom: 40px;
+}
+
+/* === Product Cards === */
+.product-card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.product-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  filter: brightness(0.9);
+}
+
+.product-card h4 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fafafa;
+  margin: 8px 0;
+}
+
+.product-card p {
+  color: #bbb;
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+/* Buttons */
+button {
+  background: #007aff;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #005cd1;
+}
+
+/* === Cart Section === */
+.cart-section {
+  background: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th {
+  background-color: #007aff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+td {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+  color: #ddd;
+}
+
+tfoot td {
+  background-color: #2a2a2a;
+  font-weight: 600;
+}
+
+div p {
+  text-align: center;
+  color: #ddd;
+  font-size: 15px;
+}
+
+div span {
+  color: #00d2ff;
+  font-weight: 600;
+}
+
+b {
+  color: #fff;
+}
+
