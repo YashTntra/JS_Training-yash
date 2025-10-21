@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form to Json Converter</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="container">
+    <h2>Form to JSON Converter</h2>
+    <button id="themeToggle">Toggle Theme</button>
+
+    <form id="userForm">
+      <label>Name:</label>
+      <input type="text" id="name">
+      <div class="error" id="nameError"></div>
+
+      <label>Email:</label>
+      <input type="email" id="email">
+      <div class="error" id="emailError"></div>
+
+      <label>Age:</label>
+      <input type="number" id="age">
+      <div class="error" id="ageError"></div>
+
+      <label>Date of Birth:</label>
+      <input type="date" id="dob">
+      <div class="error" id="dobError"></div>
+
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="Male"> Male
+      <input type="radio" name="gender" value="Female"> Female
+      <input type="radio" name="gender" value="Other"> Other
+      <div class="error" id="genderError"></div>
+
+      <label>Hobbies:</label>
+      <input type="checkbox" name="hobbies" value="Reading"> Reading
+      <input type="checkbox" name="hobbies" value="Traveling"> Traveling
+      <input type="checkbox" name="hobbies" value="Coding"> Coding
+      <input type="checkbox" name="hobbies" value="Music"> Music
+      <div class="error" id="hobbiesError"></div>
+
+      <label>Country:</label>
+      <select id="country">
+        <option value="">Select Country</option>
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+      </select>
+      <div class="error" id="countryError"></div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <h3>JSON Output:</h3>
+    <div id="jsonDisplay">[]</div>
+  </div>
+    <script src="script3.js"></script>    
+</body>
+</html>
