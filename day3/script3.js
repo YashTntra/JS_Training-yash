@@ -2,7 +2,11 @@ const form = document.getElementById("userForm");
 const jsonDisplay = document.getElementById("jsonDisplay");
 const themeToggle = document.getElementById("themeToggle");
 let jsonData = [];
-let editIndex = null; 
+let editIndex = null;
+
+function saveToLocalStorage() {
+  localStorage.setItem("formData", JSON.stringify(jsonData));
+}
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -77,6 +81,7 @@ form.addEventListener("submit", function (event) {
     jsonData.push(userData);
   }
 
+  saveToLocalStorage(); 
   displayData();
   form.reset();
 });
@@ -120,8 +125,23 @@ function editData(index) {
 
 function deleteData(index) {
   jsonData.splice(index, 1);
+  saveToLocalStorage(); 
   displayData();
 }
+
+window.addEventListener("load", function () {
+
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+  }
+
+  const savedData = localStorage.getItem("formData");
+  if (savedData) {
+    jsonData = JSON.parse(savedData);
+    displayData();
+  }
+});
 
 function showError(id, message) {
   document.getElementById(id).textContent = message;
@@ -134,4 +154,11 @@ function clearErrors() {
 
 themeToggle.addEventListener("click", function () {
   document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+  
 });
